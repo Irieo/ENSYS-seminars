@@ -1,0 +1,540 @@
+\documentclass[10pt,aspectratio=169,dvipsnames]{beamer}
+\usetheme[]{Berlin}
+
+\setbeamertemplate{footline}{
+  \usebeamercolor[fg]{framesource}%
+  \usebeamerfont{page number in head}%
+  \hspace{0.2cm}
+  \small \insertframenumber
+  \vspace{0.2cm}
+  \doclicenseIcon
+  \hfill
+  \includegraphics[height=0.8cm]{../graphics//tublogo.pdf}
+  \hspace{0.2cm}
+}
+
+\setbeamercovered{transparent}
+
+\setbeamertemplate{footline}[
+ myframe number]
+
+% PACKAGES
+\usepackage[absolute,overlay]{textpos}
+\usepackage[utf8]{inputenc}
+\usepackage[official]{eurosym}
+\usepackage{booktabs}
+\usepackage{parskip}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+
+\usepackage[
+    type={CC},
+    modifier={by},
+    version={4.0},
+]{doclicense}
+
+% HYPERREFERENCES
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	citecolor=tub-blue,
+	linkcolor=tub-blue,
+	urlcolor=tub-blue
+}
+
+% GRAPHICS	
+\graphicspath{{../graphics/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
+
+% FORMATTING
+\setlength{\parskip}{6pt}
+\linespread{1.1}
+\newcommand{\seprule}{\par\noindent\textcolor{black!25}{\rule{\textwidth}{0.4pt}}}
+
+% SOURCES
+\setbeamercolor{framesource}{fg=gray}
+\setbeamerfont{framesource}{size=\tiny}
+\newcommand{\source}[1]{\begin{textblock*}{5cm}(8.6cm,8.25cm)
+    \begin{beamercolorbox}[ht=0.5cm,right]{framesource}
+        \usebeamerfont{framesource}\usebeamercolor[fg]{framesource} Source: {#1}
+    \end{beamercolorbox}
+\end{textblock*}}
+
+% COLOR TEXT
+\newcommand{\bl}[1]{\textcolor{tub-blue}{#1}}
+\newcommand{\gr}[1]{\textcolor{tub-green}{#1}}
+\newcommand{\rd}[1]{\textcolor{tub-red}{#1}}
+\newcommand{\yl}[1]{\textcolor{tub-yellow}{#1}}
+
+\usepackage{array}% http://ctan.org/pkg/array
+\makeatletter
+\g@addto@macro{\endtabular}{\rowfont{}}% Clear row font
+\makeatother
+\newcommand{\rowfonttype}{}% Current row font
+\newcommand{\rowfont}[1]{% Set current row font
+   \gdef\rowfonttype{#1}#1%
+}
+\newcolumntype{L}{>{\rowfonttype}l}
+\newcolumntype{R}{>{\rowfonttype}r}
+
+% FONT
+% \usepackage{utopia} 
+
+% REFERENCES
+%\usepackage[backend=biber,style=authoryear-comp]{biblatex}
+%\bibliography{references.bib}
+
+% TITLE PAGE
+\title{Introduction to the Seminars}
+
+\author{\bf Prof. Dr. Tom Brown, Dr. Iegor Riepin, Philipp Glaum}
+
+\institute[Technische Universität Berlin] % (optional, but mostly needed)
+{
+  \normalsize
+  Technische Universität Berlin\\
+  Department of Digital Transformation in Energy Systems \\
+  Institute of Energy Technology
+}
+
+\date{22 November 2023}
+
+\subject{Modelling the European Energy System}
+
+\titlegraphic{%
+	\includegraphics[trim=0 0cm 0 0cm,height=1.7cm,clip=true]{../graphics/tublogo.pdf}
+}
+
+\begin{document}
+
+{
+\setbeamertemplate{footline}{}
+\maketitle
+}
+\addtocounter{framenumber}{-1}
+
+\begin{frame}
+  \frametitle{Outline}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+
+\section{General Information}
+
+\begin{frame}{Overview}
+
+  \begin{itemize}
+    \item Seminars:
+          \begin{itemize}
+            \item New Research in Energy System Modelling:
+                  \\ \href{https://isis.tu-berlin.de/course/view.php?id=34393}{https://isis.tu-berlin.de/course/view.php?id=34393}
+            \item New Development in Energy Markets:\\ \href{https://isis.tu-berlin.de/course/view.php?id=33777}{https://isis.tu-berlin.de/course/view.php?id=33777}
+          \end{itemize}
+    \item Credit points: 3 ECTS
+    \item Language: English/German
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Expectations}
+
+  \begin{itemize}
+    \item Day of presentations: 20-min presentation of a selected topic, 15-min discussion, 5-min feedback from supervisors and students
+    \item Several consultations with your supervisor
+    \begin{itemize}
+        \item Better to start early -- recommended first meeting in July
+        \item Better to be prepared -- you can have a valuable discussion with your supervisor
+        \item At least one meeting with your supervisor is mandatory
+    \end{itemize}
+    \item Attend all seminar presentations \&  participate in discussions
+    \item Evaluation criteria are uploaded to ISIS
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Organisational Classification}
+
+    \begin{block}{Seminar only}
+          \begin{tabularx}{0.8\textwidth}{l l l}
+            \textbf{Free choice / Freie Wahl} & & \textbf{3 ECTS}\\
+            Seminar/Vortragsreihe & Presentation,participation & 3 ECTS
+          \end{tabularx}
+    \end{block}
+    \begin{block}{Portfolio examination}
+    \begin{tabularx}{0.8\textwidth}{l l l}
+            \textbf{Energy Systems (Project EVT)} & & \textbf{9 ECTS}\\
+            Energy Systems (SS)   & Lecture, tutorial, written exam & 6 ECTS \\
+            Seminar/Vortragsreihe & Presentation, participation     & 3 ECTS
+      \end{tabularx}
+      \newline
+      \newline
+      Eligible study programs: Master EVT, RES, Industrial Engineering and Management
+  \end{block}
+          
+
+
+\end{frame}
+
+
+\begin{frame}{Timeline}
+
+  \begin{itemize}
+    \item See the "Preliminary registration" and "Topic allocation" polls on ISIS: 
+        \begin{itemize}
+            \item Allocation algorithm considers your preferences \textbf{not} "First come, first served"
+            \item Start: 25 May 2023 14:00
+            \item End: 2 June 2023 23:59
+            \item Allocation announced: 12 June 2023 
+          \end{itemize}
+    \item Binding confirmation via MTS until: 19 June 2023 23:59
+    \item Limited spots: students with seminar as elective courses are prioritized but we have a waiting list
+    \item Presentation dates:
+          \begin{itemize}
+            \item New Research in Energy System Modelling: \textbf{22 September 2023}
+            \item New Developments in Energy Markets: \textbf{18 \& 19  September 2023}
+          \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+
+% \begin{frame}{Time schedule for registration}
+
+%   \begin{itemize}
+%     \item Registration via questionnaire (25 May - 2 June)
+%     \item Topic allocation (25th of May - 2nd June)
+%     \item Announcement of topic allocation (12th June)
+%     \item Registration on MTS (12th to 19th June)
+    
+%   \end{itemize}
+
+% \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Topics: New Research in Energy System Modelling}
+
+\begin{frame}
+Seminar topics for {\bf "New Research in Energy System Modelling"}
+
+You will be supervised by the research staff of the two departments:  
+    \begin{itemize}
+        \item Department of \href{https://www.ensys.tu-berlin.de/menue/overview/}{Digital Transformation in Energy Systems} at TU Berlin lead by Prof.~Tom~Brown
+        \item Department of \href{https://www.pik-potsdam.de/en/institute/departments/transformation-pathways/research/energy-systems}{Energy Systems} at Potsdam Institute for Climate Impact Research lead by Prof.~Gunnar~Luderer.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 1: A low-carbon electricity sector in Europe risks sustaining regional inequalities in benefits and vulnerabilities}
+      
+    Sasse and Trutnevyte (2023), \href{https://doi.org/10.1038/s41467-023-37946-3}{https://doi.org/10.1038/s41467-023-37946-3}
+    
+    "Improving equity is an emerging priority in climate and energy strategies, but little is known how these strategies would alter inequalities. Regional inequalities such as price, employment and land use are especially relevant in the electricity sector, which must decarbonize first to allow other sectors to decarbonize. Here, we show that a European low-carbon electricity sector in 2035 can reduce but also sustain associated regional inequalities. Using spatially-explicit modeling for 296 sub-national regions, we demonstrate that emission cuts consistent with net-zero greenhouse gas emissions in 2050 result in continent-wide benefits by 2035 regarding electricity sector investments, employment gains, and decreased greenhouse gas and particulate matter emissions. However, the benefits risk being concentrated in affluent regions of Northern Europe, while regions of Southern and Southeastern Europe risk high vulnerabilities due to high adverse impacts and sensitivities, and low adaptive capacities. Future analysis should investigate policy mechanisms for reducing and compensating inequalities." 
+
+    \hfill
+    Topic supervisor: Fabian Neumann, f.neumann@tu-berlin.de
+    
+  \end{block}
+\end{frame}
+
+
+
+\begin{frame}
+  \begin{block}{Topic 2: National growth dynamics of wind and solar power compared to the growth required for global climate targets}
+      
+    Cherp et al. (2021), 
+    \href{https://doi.org/10.1038/s41560-021-00863-0}{https://doi.org/10.1038/s41560-021-00863-0}
+    
+    "Climate mitigation scenarios envision considerable growth of wind and solar power, but scholars disagree on how this growth compares with historical trends. Here we fit growth models to wind and solar trajectories to identify countries in which growth has already stabilized after the initial acceleration. National growth has followed S-curves to reach maximum annual rates of 0.8\% (interquartile range of 0.6–1.1\%) of the total electricity supply for onshore wind and 0.6\% (0.4–0.9\%) for solar. In comparison, one-half of 1.5~°C-compatible scenarios envision global growth of wind power above 1.3\% and of solar power above 1.4\%, while one-quarter of these scenarios envision global growth of solar above 3.3\% per year. Replicating or exceeding the fastest national growth globally may be challenging because, so far, countries that introduced wind and solar power later have not achieved higher maximum growth rates, despite their generally speedier progression through the technology adoption cycle." 
+
+    \hfill
+    Topic supervisor: Adrian Odenweller, adrian.odenweller@pik-potsdam.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 3: Stylized least-cost analysis of flexible nuclear power in deeply decarbonized electricity systems considering wind and solar resources worldwide}
+      
+    Duan et al. (2022), 
+    \href{https://www.nature.com/articles/s41560-022-00979-x}{https://www.nature.com/articles/s41560-022-00979-x}
+    
+    "New designs of advanced nuclear power plants have been proposed that may allow nuclear power to be less expensive and more flexible than conventional nuclear. It is unclear how and whether such a system would complement variable renewables in decarbonized electricity systems. Here we modelled stylized electricity systems under a least-cost optimization framework taking into account technoeconomic factors only, considering electricity demand and renewable potential in 42 country-level regions. In our model, in moderate decarbonization scenarios, solar and wind can provide less costly electricity when competing against nuclear at near-current US Energy Information Administration (US$\$6,317$ per kilowatt-electric (kWe)) and at US$\$4,000~kWe^{-1}$ cost levels. In contrast, in deeply decarbonized systems (for example, beyond ~80\% emissions reduction) and in the absence of low-cost grid-flexibility mechanisms, nuclear can be competitive with solar and wind. High-quality wind resources can make it difficult for nuclear to compete. Thermal heat storage coupled to nuclear power can, in some cases, promote wind and solar." 
+
+    \hfill
+    Topic supervisor: Philipp Verpoort, philipp.verpoort@pik-potsdam.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 4:  Committed emissions from existing energy infrastructure jeopardize 1.5~°C climate target.}
+      
+    Tong et al. (2019), 
+    \href{https://doi.org/10.1038/s41586-019-1364-3 }{https://doi.org/10.1038/s41586-019-1364-3}
+    
+    "Net anthropogenic emissions of carbon dioxide (CO$_2$) must approach zero by mid-century (2050) in order to stabilize the global mean temperature at the level targeted by international efforts. Yet continued expansion of fossil-fuel-burning energy infrastructure implies already ‘committed’ future CO$_2$ emissions. Here we use detailed datasets of existing fossil-fuel energy infrastructure in 2018 to estimate regional and sectoral patterns of committed CO$_2$ emissions, the sensitivity of such emissions to assumed operating lifetimes and schedules, and the economic value of the associated infrastructure. [...] Our estimates suggest that little or no new CO$_2$-emitting infrastructure can be commissioned, and that existing infrastructure may need to be retired early (or be retrofitted with carbon capture and storage technology) in order to meet the Paris Agreement climate goals. Given the asset value per tonne of committed emissions, we suggest that the most cost-effective premature infrastructure retirements will be in the electricity and industry sectors, if non-emitting alternatives are available and affordable."
+
+    \hfill
+    Topic supervisor: Gunnar Luderer, luderer@pik-potsdam.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 5:  Carbon dioxide removal technologies are not born equal}
+      
+    Strefler et al. (2021), 
+    \href{https://doi.org/10.1088/1748-9326/ac0a11}{https://doi.org/10.1088/1748-9326/ac0a11}
+    
+    "Technologies for carbon dioxide removal (CDR) from the atmosphere have been recognized as an important part of limiting warming to well below 2°C called for in the Paris Agreement. However, many scenarios so far rely on bioenergy in combination with carbon capture and storage as the only CDR technology. Various other options have been proposed, but have scarcely been taken up in an integrated assessment of mitigation pathways. In this study we analyze a comprehensive portfolio of CDR options in terms of their regional and temporal deployment patterns in climate change mitigation pathways and the resulting challenges. We show that any CDR option with sufficient potential can reduce the economic costs of achieving the 1.5°C target substantially without increasing the temperature overshoot. CDR helps to reduce net CO$_2$ emissions faster and achieve carbon neutrality earlier. [...] In our study, the full portfolio scenario is the most balanced from a regional perspective. This indicates that different CDR options should be developed such that all regions can contribute according to their regional potentials."
+
+    \hfill
+    Topic supervisor:  Anne Merfort, amerfort@pik-potdam.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 6:  Future demand for electricity generation materials under different climate mitigation scenarios.}
+      
+    Wang et al. (2023), 
+    \href{https://doi.org/10.1016/j.joule.2023.01.001}{https://doi.org/10.1016/j.joule.2023.01.001}
+    
+    "Global decarbonization of the electricity generation sector over the next three decades will necessitate the construction of substantial new infrastructure such as wind and solar farms, hydroelectric generating stations, and nuclear power plants. Such infrastructure contains substantial quantities of materials, from bulk commodities like steel and cement to specialty metals like silver and rare earth metals. Our estimates of future power sector generation material requirements across a wide range of climate-energy scenarios highlight the need for greatly expanded production of certain commodities. However, we find that geological reserves should suffice to meet anticipated needs, and we also project climate impacts associated with the extraction and processing of these commodities to be marginal. Due to varying material intensity of different power generation technologies, technological choices strongly influence the spectrum of future material requirements."
+
+    \hfill
+    Topic supervisor:  Christoph Tries, christoph.tries@tu-berlin.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 7: Competitive and secure renewable hydrogen markets: Three strategic scenarios for the European Union.}
+      
+    Nuñez-Jimenez and De Blasio (2022), 
+    \href{https://doi.org/10.1016/j.ijhydene.2022.08.170}{https://doi.org/10.1016/j.ijhydene.2022.08.170}
+    
+    "The European Union (EU) considers renewable hydrogen a key priority for achieving climate neutrality and therefore needs to develop competitive and secure renewable hydrogen supplies. International trade could play a major role in meeting EU hydrogen needs and will require the creation of highly integrated markets between member states. This article analyzes three strategic scenarios in which the EU prioritizes energy independence, cost optimization, or energy security using an optimization model of international hydrogen trade based on production potentials and cost curves in EU countries and potential trade partners. The results show that, while the EU could become hydrogen independent, imports from neighboring countries could minimize overall costs despite higher transportation costs. However, imports from neighboring countries may reproduce past energy dependence patterns. Our results show that to limit reliance on a single supplier without increasing overall costs, the EU could leverage long-distance imports."
+
+    \hfill
+    Topic supervisor:  Tom Brown, t.brown@tu-berlin.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 8: Opportunities for flexible electricity loads such as hydrogen production from curtailed generation.}
+      
+    Ruggles et al. (2021), 
+    \href{https://doi.org/10.1016/j.adapen.2021.100051}{https://doi.org/10.1016/j.adapen.2021.100051}
+    
+    "Variable, low-cost, low-carbon electricity that would otherwise be curtailed may provide a substantial economic opportunity for entities that can flexibly adapt their electricity consumption. We used historical hourly weather data over the contiguous U.S. to model the characteristics of least-cost electricity systems dominated by variable renewable generation that powered firm and flexible electricity demands (loads). Scenarios evaluated included variable wind and solar power, battery storage, and dispatchable natural gas with carbon capture and storage, with electrolytic hydrogen representing a prototypical flexible load. When flexible loads were small, excess generation capacity was available during most hours, allowing flexible loads to operate at high capacity factors. Expanding the flexible loads allowed the least-cost systems to more fully utilize the generation capacity built to supply firm loads, and thus reduced the average cost of delivered electricity. [...] These results indicate that adding flexible loads to electricity systems will likely allow more full utilization of generation assets across a wide range of system architectures, thus providing new energy services with infrastructure that is already needed to supply firm electricity loads."
+
+    \hfill
+    Topic supervisor:  Philipp Glaum, p.glaum@tu-berlin.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 9: Flexible green hydrogen: Economic benefits without increasing power sector emissions.}
+      
+    Ruhnau and Schiele (2022), 
+    \href{https://www.econstor.eu/handle/10419/258999}{https://www.econstor.eu/handle/10419/258999}
+    
+    "Electrolytic hydrogen complements renewable energy in many net-zero energy scenarios. In these long-term scenarios with full decarbonization, the “greenness” of hydrogen is without question. In current energy systems, however, the ramp-up of hydrogen production may cause additional emissions. To avoid this potential adverse effect, recently proposed EU regulation defines strict requirements for electrolytic hydrogen to qualify as green: electrolyzers must run on additional renewable generation, which is produced in a temporally and geographically congruent manner. Focusing on the temporal dimension, this paper argues in favor of a more flexible definition of green hydrogen, which keeps the additionality criterion on a yearly basis but allows for dispatch optimization on a market basis within that period. We develop a model that optimizes dispatch and investment of a wind-hydrogen system—including wind turbines, hydrogen electrolysis, and hydrogen storage—and apply the model to a German case study based on data from 2017-2021. Contrasting different regulatory conditions, we show that a flexible definition of green hydrogen can reduce costs without additional power sector emissions. By contrast, requiring simultaneity implies that a rational investor would build a much larger wind turbine, hydrogen electrolyzer, and hydrogen storage than needed. [...]"
+
+    \hfill
+    Topic supervisor:  Fabian Hofmann, m.hofmann@tu-berlin.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 10: Impacts of Inter-annual Wind and Solar Variations on the European Power System}
+      
+     Collins et al. (2018), 
+    \href{https://doi.org/10.1016/j.joule.2018.06.020}{https://doi.org/10.1016/j.joule.2018.06.020}
+    
+    "Wind and solar power have been driving the decarbonization of Europe's electricity over the last decade. Increasing our reliance on weather-dependent resources makes it imperative that planning of electricity systems becomes cognizant of their long-term variability. Studies often neglect the long-term variability of these resources by using only data from a single or a few years or fail to account for the impacts of short-term international electricity flows and limitations on generator flexibility, which are critical to the integration of these variable generation sources. This study uses a continental electricity system model and 30 years of hourly wind and solar data to determine the impact of long-term weather patterns on European electricity system operation and how this varies with decarbonization ambition. The results show that the variability of CO$_2$ emissions and total generation costs for this interconnected electricity system could increase 5-fold by 2030 compared with 2015."
+
+    \hfill
+    Topic supervisor:  Iegor Riepin, iegor.riepin@tu-berlin.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 11: Minimizing emissions from grid-based hydrogen production in the United States}
+      
+     Ricks et al. (2023), 
+    \href{http://dx.doi.org/10.1088/1748-9326/acacb5}
+    {http://dx.doi.org/10.1088/1748-9326/acacb5}
+    
+    "Low-carbon hydrogen could be an important component of a net-zero carbon economy, helping to mitigate emissions in a number of hard-to-abate sectors. The United States recently introduced an escalating production tax credit (PTC) to incentivize production of hydrogen meeting increasingly stringent embodied emissions thresholds. Hydrogen produced via electrolysis can qualify for the full subsidy under current federal accounting standards if the input electricity is generated by carbon-free resources, but may fail to do so if emitting resources are present in the generation mix. [...] Herein we use electricity system capacity expansion modeling to quantitatively assess the impact of grid-connected electrolysis on the evolution of the power sector in the western United States through 2030 [...]. We find that subsidized grid-connected hydrogen production has the potential to induce additional emissions at effective rates worse than those of conventional, fossil-based hydrogen production pathways. Emissions can be minimized by requiring grid-based hydrogen producers to match 100\% of their electricity consumption on an hourly basis with physically deliverable, 'additional' clean generation, which ensures effective emissions rates equivalent to electrolysis exclusively supplied by behind-the-meter carbon-free generation. [...]"
+
+    \hfill
+    Topic supervisor: Elisabeth Zeyen, e.zeyen@tu-berlin.de
+    
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Topic 12: The role of sector coupling in the green transition: A least-cost energy system development in Northern-central Europe towards 2050}
+      
+    Gea-Bermúdez et al. (2021), 
+    \href{https://doi.org/10.1016/j.apenergy.2021.116685}
+    {https://doi.org/10.1016/j.apenergy.2021.116685}
+    
+    "This paper analyses the role of sector coupling towards 2050 in the energy system of Northern-central Europe when pursuing the green transition. Impacts of restricted onshore wind potential and transmission expansion are considered. Optimisation of the capacity development and operation of the energy system towards 2050 is performed with the energy system model Balmorel. Generation, storage, transmission expansion, district heating, carbon capture and storage, and synthetic gas units compete with each other. The results show how sector coupling leads to a change of paradigm: The electricity system moves from a system where generation adapts to inflexible demand, to a system where flexible demand adapts to variable generation. Sector coupling increases electricity demand, variable renewable energy, heat storage capacity, and electricity and district heating transmission expansion towards 2050. Non-restricted investments in onshore wind and electricity transmission reduce emissions and costs considerably (especially with high sector coupling) with savings of 78.7~€$_{2016}$/person/year. [...]."
+
+    \hfill
+    Topic supervisor: Sebastian Osorio, sebastian.osorio@pik-potsdam.de
+    
+  \end{block}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Topics: New Development in Energy Market}
+
+\begin{frame}
+Seminar topics for {\bf "New Developments in Energy Markets"}
+
+You will be suppervised by:  
+    \begin{itemize}
+        \item  Research staff of the department of \href{https://www.ensys.tu-berlin.de/menue/overview/}{Digital Transformation in Energy Systems} at TU Berlin lead by Prof.~Tom~Brown
+        \item Prof. Georg Erdmann
+        \item Prof. Andreas Grübel
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Markets for carbon dioxide removal}
+    While you can purchase certificates for carbon emissions, there are no current schemes that offer compensation for removal of carbon dioxide from the air (CDR). Some suggest that emissions and removal markets should be developed separately to encourage investment in CDR, so that the markets can later be coupled. Some have proposed intertemporal “carbon debts”.\\
+    \href{https://www.frontiersin.org/articles/10.3389/fclim.2021.690023/full}{Integrating Carbon Dioxide Removal Into European Emissions Trading}\\
+    \href{https://www.swp-berlin.org/publications/products/research_papers/2020RP08_ClimateMitigation.pdf}{Research Paper on Unconventional Mitigation}\\
+    \href{https://www.nature.com/articles/s41586-021-03723-9}{Operationalizing the net-negative carbon economy}\\
+    \href{https://blogs.microsoft.com/blog/2021/01/28/one-year-later-the-path-to-carbon-negative-a-progress-report-on-our-climate-moonshot/}{Microsoft's path to "climate negative"}\\
+    \href{https://www.ft.com/content/69c5e964-a91a-42b8-818d-6a5d9b21b6cd}{UK emission trading scheme plans to adopt credits for direct air capture}\\
+    \href{https://www.theatlantic.com/science/archive/2022/04/big-tech-investment-carbon-removal/629545/}{Big Tech invests \$900 million in CDR}
+    \end{block}  
+\end{frame}
+
+\begin{frame}
+    \begin{block}{ETS 2: Heating and Transport}
+    In 2023 the European Union signed off on a new parallel ETS for transport and buildings to start in 2027/8. You will describe its features and differences to the ETS 1 for energy and industry.\\
+    \href{https://energypost.eu/understanding-the-new-eu-ets-part-2-buildings-road-transport-fuels-and-how-the-revenues-will-be-spent/}{Link 1}
+    \end{block}
+    \begin{block}{Synthetic Inertia markets in Great Britain}
+    At even shorter time scales than balancing power acts, the inertia of rotating synchronous generators helps to stop the frequency changing too fast. But what happens when most of the generation comes from PV and wind inverters that don’t have any inherent inertia? Inverters can be adapted to provide synthetic inertia, or generators can be run without a prime mover in synchronous condenser mode. Great Britain has led the way in new markets for synthetic inertia. You will explain what synthetic inertia is, how the market is structured, what players are on the market and how well it is working.\\
+    \href{https://www.nationalgrideso.com/news/green-inertia-projects-and-world-first-tech-tell-british-energy-success-story}{Link 1}
+    \href{https://arxiv.org/abs/2208.04869}{Link 2}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \begin{block}{Flexibilisierung von Biogasanlagen}
+    In der Vergangenheit liefen viele Biogasanlagen in Grundlastbetrieb. Der Gesetzgeber versucht Anreize für einen marktorientierten flexiblen Betrieb zu schaffen. Sie liefern einen Überblick des Status-Quos und wie die Flexibilisierung mit der Maximierung von Biogas-Produktion für die Gaskrise zusammenpasst.\\
+    \href{https://www.kwk-flexperten.net/flexibilisierung-von-biogasanlagen}{Link 1}
+    \href{https://biogas.fnr.de/biogas-nutzung/stromerzeugung/flexibilisierung-von-biogasanlagen}{Link 2}
+    \href{https://www.dbfz.de/fileadmin//user_upload/Referenzen/Studien/160323_Externes_Hintergrundpapier_Flexibilisierung_von_Biogasanlagen_in_Deutschland.pdf}{Link 3}
+    \end{block}
+    \begin{block}{Präqualifikation Offshore-Wind für Reserveleistung}
+    In Mai 2022 hat Offshore-Wind zum ersten Mal für Regelleistung in Form von Minutenreserve und Sekundärreserve präqualifiziert. Sie erklären, worum es geht und welche Herausforderungen im Weg standen.\\
+    \href{https://orsted.de/presse-media/news/2022/05/borkum-riffgrund-1-regelenergie}{Link 1}
+    \end{block}
+    \begin{block}{Capacity markets in France}
+    For some years France has run capacity markets for power generation. You will describe how the market works and what lessons there might be for other countries like Germany.\\
+    \href{https://www.eex.com/en/services/registry-services/french-capacity-guarantees-for-rte}{Link 1}
+    \href{https://www.services-rte.com/en/learn-more-about-our-services/participate-in-the-capacity-mechanism.html}{Link 2}
+    \href{https://www.agora-energiewende.de/en/projects/comparing-capacity-market-designs-in-france-and-potentially-germany/}{Link 3}
+    \end{block}
+\end{frame}
+\begin{frame}
+    \begin{block}{Australian electricity market suspension in June 2022}
+    In June 2022 the Australian National Electricity Market (NEM) was suspended for several days due to irregularities. Difficult conditions included a confluence of high commodity prices, domestic market price caps, planned and unplanned outages of scheduled generating plant, low output from semi-scheduled generation, and high winter demand conditions. You will explain what happened and what lessons can be learned.\\
+    \href{https://www.aemo.com.au/-/media/files/electricity/nem/market_notices_and_events/market_event_reports/2022/nem-market-suspension-and-operational-challenges-in-june-2022.pdf}{Link 1}
+    \end{block}
+    \begin{block}{Gesetzes zum Neustart der Digitalisierung der Energiewende}
+    Zentrales Ziel des Gesetzes zum Neustart der Digitalisierung der Energiewende ist es, den Smart-Meter-Rollout zu beschleunigen. Warum gibt es Verzögerungen und wie sollen die Änderungen nun wirken?\\
+    \href{https://dserver.bundestag.de/btd/20/064/2006457.pdf}{Link 1}\\
+    \href{https://www.gesetze-im-internet.de/messbg/}{Stute, Judith, and Matthias Kühnbach. "Dynamische Stromtarife unter Berücksichtigung des Nutzendenverhaltens: Auswirkungen auf das Verteilnetz." 12. Internationale Energiewirtschaftstagung an der TU Wien (2021).}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Dynamische Tarife}
+    Das Gesetz zum Neustart der Digitalisierung der Energiewende soll die Einführung dynamischer Tarife ermöglichen. Für die Energiewende ist es unabdingbar, auf der Verbraucherseite dynamische und flexible Tarife und Demand Side Management flächendeckend umzusetzen. Welche Produkte und Lösungen gibt es?\\
+    \href{https://www.agora-energiewende.de/fileadmin/Projekte/2017/Abgaben_Umlagen/146_Neue-Preismodelle_WEB.pdf}{Link 1}
+    \href{https://tibber.com/de}{Link 2}
+    \end{block}
+    \begin{block}{Portfolio- und Risikomanagement in Krisenzeiten}
+    Energieversorgungsunternehmen (EVU) standen in den vergangenen Monaten vor großen Herausforderungen: Zum einen mussten sie Kunden aufnehmen, weil Konkurrenten die Belieferung eingestellt haben, zum anderen konnten sie diesen Kunden keine Marktpreise anbieten. Darüber hinaus fielen Vorlieferanten der EVU aus und die verbleibenden Lieferanten verlangten plötzlich Sicherheiten. Analysieren Sie die aktuelle Situation und wagen Sie einen Ausblick, wie sich die EVU-”Landschaft” verändern wird.\\
+    \href{https://www.bafin.de/SharedDocs/Downloads/DE/Rundschreiben/dl_rs1021_MaRisk_Erlaeuterungen.pdf?__blob=publicationFile&v=5}{Link 1}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Consequences of the Inflation Reduction Act for Europe}
+    US is subsidising everything, how should EU react?
+    \end{block}
+    \begin{block}{Financial Wind Contracts for Difference}
+    Suggestion from Ingmar Schlecht, Lion Hirth and Christian Maurer to combine the benefits of contracts for difference (CfD) for developers (lower risk) and consumers (if prices are high) with market incentives of market premium system.\\
+    \href{http://hdl.handle.net/10419/267597}{Link 1}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Wind-Ausschreibungen Rückblick}
+    Seit 2017 erfolgt der politisch geförderte Ausbau von Windenergie an Land in Deutschland über regelmäßige Auktionen. Dazu legt die Bundesnetzagentur jeweils maximale Ausschreibungs-Mengen und zulässige Höchstpreise fest. Die Entwickler bieten die von ihnen zu installierenden Mengen und die gewünschte staatlich garantierte Mindestvergütung. In der Vergangenheit lagen die bezuschlagten Mengen oftmals unter den ausgeschriebenen Mengen. Vor diesem Hintergrund soll der Vortrag die Entwicklun ges Instruments diskutieren.\\
+    \href{https://www.bundesnetzagentur.de/DE/Fachthemen/EektrizitaetundGas/Ausschreibungen/start.html}{Link 1}
+    \href{https://www.wirtschaftsdienst.eu/inhalt/jahr/2023/heft/2/beitrag/gebotskostenfoerderung-in-windenergie-auktionen.html}{Link 2}
+    \end{block}
+    \begin{block}{Ausschreibungen von PV-Freiflächenanlagen}
+    Ähnlich wie bei Windanlagen führt die Bundesnetzagentur auch regelmäßige Ausschreibungen von PV-Freiflächenanlagen durch. §§ 28 bis 35a und 37 bis 38b EEG liefern die gesetzliche Grundlage dafür. Mit der Einführung der PV-Ausschreibungen im Jahr 2017 wurden die von den Stromverbrauchern zu tragenden Belastungen des PV-Ausbaus deutlich gesenkt. D.er Vortrag soll die Details dieser Regelung sowie die Erfahrungen der letzten Jahre erörtern.\\
+    \href{https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/Ausschreibungen/Solaranlagen1/start.html}{Link 1}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Klimafreundlicher Luftverkehr - Überblick}
+    Trotz steigender Ticketpreise und vermehrtem Verzicht auf Geschäftsreisen hat das Verkehrsvolumen der Luftfahrt fast wieder den Stand vor der Corona-Pandemie erreicht. Insbesondere für den Langstreckenverkehr dürfte die Batterie getriebene Elektromobilität vorerst aus Gewichtsgründen ausscheiden. Doch welche Möglichkeiten gibt es, um auch in diesem Sektor die Emission von Treibhausgasen drastisch zu senken? Forschungsinstitutionen, Flugzeugbauer und Luftfahrtgesellschaften arbeiten an einem Portfolio an Lösungen. Einen ersten Überblick verschafft \\
+    \href{https://www.helmholtz-klima.de/aktuelles/klimafreundlich-fliegen}{Link 1}
+    \end{block}
+    \begin{block}{CO2-Schiff, CO2-Kreislauf - Tree Energy Solutions / Sequestrierung}
+    Idea: Dual use ships arrive in Germany with LNG, take CO2 back to Norway for sequestration or to green-H2-rich countries for methanation (a la Tree Energy Solutions). What are the challenges, current status, prospects. \\
+    \href{https://maritime-executive.com/article/study-dual-use-lng-shipping-could-transform-carbon-capture}{Link 1}
+    \href{https://www.naturalgasworld.com/dual-use-shipping-an-idea-whose-time-has-yet-to-come-gas-in-transition-103245}{Link 2}
+    \href{https://www.aiche.org/fscarbonmanagement/cmtc/2019/proceeding/paper/techno-economic-modeling-dual-purpose-lng-co2-shipping}{Link 3}
+    \href{https://tes-h2.com/}{Link 4}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Industriestrompreis}
+    Traditionell jammert die Industrie über zu hohe Strompreise, die ihre internationale Wettbewerbsfähigkeit beeinträchtigen würden. Schon in der Vergangenheit hat das Bundeswirtschaftsministerium nach Rücksprache mit der EU-Kommission in Einzelfällen Vergünstigungen gewährt. Als Spätfolge der Energiepreisexplosion im Jahr 2022 scheint jetzt aber ein globaler Subventionswettlauf eingesetzt zu haben. Anfang Mai 2023 hat das Bundeswirtschaftsministerium ein Arbeitspapier dazu vorgelegt.\\
+    \href{https://www.bmwk.de/Redaktion/DE/Downloads/W/wettbewerbsfaehige-strompreise-fuer-die-energieintensiven-unternehmen-in-deutschland-und-europa-sicherstellen.html}{Link 1}
+    \href{https://www.oeko.de/fileadmin/oekodoc/Stellungnahme-Strommarktdesign-Weiterentwicklung.pdf}{Link 2}
+    \end{block}
+\end{frame}
+\end{document}
